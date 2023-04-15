@@ -1,0 +1,38 @@
+nav{
+    height: 100px;
+    
+}
+/* This width is the one that makes the content not responsive */
+.container{
+    position: relative; left: 80px;
+    width: 1000px; 
+}
+section{
+    position: relative; top: 50px;
+}
+#hire{
+    background-color: #0B1C2C;
+    color: #D4A81E;
+}
+#enrol{
+    background-color: #D4A81E;
+    color: #0B1C2C;
+}
+/* a{
+    position: relative; left: 200px;
+}  */
+#line{
+    background-color: #D4A81E;
+    width: 50px;
+    height: 5px;
+    position: relative; left:410px; top: -30px;
+}
+#h7{
+position: relative;left: -30px;
+}
+#imggg{
+    width: 100px;
+}
+.branchnameAndButton{
+padding-left: 15px;
+}
