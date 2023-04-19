@@ -5,30 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branches</title>
+    <link rel="shortcut icon" href="./img/logo 4.png" type="image">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="img/favicon.ico" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      <!-- For enrol -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- end enrol -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .center,
+    .startz-btn {
+      position: absolute;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+
+    .modal-box {
+
+
+      opacity: 0;
+      visibility: hidden;
+      background: white;
+      height: auto;
+
+      border-radius: 5px;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    }
+
+    .start-btn.show-modal {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .modal-box.show-modal {
+      position: relative;
+      top: 380px;
+      left: 50%;
+
+      opacity: 1;
+      visibility: visible;
+      transition: .4s;
+    }
+
+    .modal-box .fa-times {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #D4A81E;
+      height: 40px;
+
+      line-height: 40px;
+
+
+      color: white;
+      font-size: 18px;
+      border-radius: 100%;
+      /* text-align: center; */
+      cursor: pointer;
+    }
+
+    .fa-times:hover {
+      font-size: 22px;
+    }
+
+
+    .form_container {
+      background: #fff;
+      padding: 30px;
+      margin-top: 20px;
+      border-radius: 3px;
+    }
+
+    .form_container .form_item {
+      margin-bottom: 25px;
+    }
+
+    .form_container .form_wrap.form_grp {
+      display: flex;
+    }
+
+    .form_container .form_wrap.form_grp .form_item {
+      width: 50%;
+    }
+
+    .form_container .form_wrap.form_grp .form_item:first-child {
+      margin-right: 4%;
+    }
+
+    .form_container .form_item label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form_container .form_item input,
+    .form_container .form_item select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #dadce0;
+      border-radius: 3px;
+    }
+
+    .form_container .btn input[type="submit"] {
+      background: #6271f0;
+      border: 1px solid #6271f0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      color: #fff;
+    }
+  </style>
 
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light card shadow p-3 mb-5">
-    <div class="container-fluid">
-    <img src="./img/logo 4.png" width="170px" alt="">          
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-     
-      <span class="navbar-toggler-icon"></span>
+  <nav class="navbar  navbar-expand-lg navbar-light card shadow p-3 mb-5" style="width: 100%;">
+    <div class="container-fluid ">
+      <a href="index.html"><img src="./img/logo 4.png" width="170px" alt=""> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div style="background-color: white; z-index: 2; text-align: center;" class=" collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="   navbar-nav me-auto mb-2 mb-lg-0" style="position: relative; left: 150px;">
+      <div style="background-color: white; z-index: 2; text-align: center;" class=" collapse navbar-collapse"
+        id="navbarSupportedContent">
+        <ul class="   navbar-nav me-auto mb-2 mb-lg-0" style="position: relative; left: 5%;">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About </a>
+            <a class="nav-link " href="about.html">About </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="courses.html">Course</a>
@@ -36,10 +153,11 @@
           <li class="nav-item">
             <a class="nav-link" href="programs.html">Programs</a>
           </li>
-          <li  class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Cohorts
-            </a >
+            </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="cohort1-2.html">Cohort 1-2</a></li>
               <li><a class="dropdown-item" href="cohort3-4.html">Cohort 3-4</a></li>
@@ -54,16 +172,93 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
-        
+          <li class="nav-item">
+            <a class="nav-link" href="donate.html">Donate</a>
+          </li>
         </ul>
         <button id="hire" class="btn" type="submit">Hire a talent</button>
-         &nbsp; &nbsp; <button id="enrol" class="btn" type="submit">Enrol</button>
-       
+
+        &nbsp; &nbsp;
+        <div id="enrol" class="start-btn btn">
+          <a>Enrol</a>
+        </div>
+
       </div>
     </div>
   </nav>
+
+  <div class="center modal-box">
+
+    <div class="fas fa-times"></div>
+
+    <div class="form_container">
+      <form name="form">
+        <div class="form_wrap form_grp">
+          <div class="form_item">
+            <label>First Name</label>
+            <input type="text">
+
+          </div>
+          <div class="form_item">
+            <label>Last Name</label>
+            <input type="text">
+
+          </div>
+        </div>
+        <div class="form_wrap">
+          <div class="form_item">
+            <label>Gender</label>
+            <select name="country">
+              <option>Male</option>
+              <option>Famale</option>
+              <option>others</option>
+            </select>
+          </div>
+        </div>
+        <div class="form_wrap form_grp">
+          <div class="form_item">
+            <label>Phone number</label>
+            <input type="text" placeholder="+27 ">
+
+          </div>
+          <div class="form_item">
+            <lable>Date of Birth</lable>
+            <input type="date" id="start" name="trip-start" value="2023" min="1988-01-01">
+
+          </div>
+        </div>
+
+        <div class="form_wrap">
+          <div class="form_item">
+            <label>Email</label>
+            <input type="email">
+            <div class="error" id="phone"></div>
+          </div>
+        </div>
+        <div class="form_wrap">
+          <div class="form_item">
+            <label>Address</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="form_wrap">
+          <div class="form_item">
+            <label>City</label>
+            <input type="text">
+          </div>
+          <div class="form_item">
+            <label>State / Province</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="btn">
+          <input type="submit" value="Get Started">
+        </div>
+      </form>
+    </div>
+  </div>
     
     <div class="container">
       <div class="row">
@@ -90,7 +285,7 @@
               <img src="./img/Branches/branch1.png" style="height: 250px;" class="card-img-top" alt="...">
               <div class="card-body ">
                     <div id="h7" class=" branchnameAndButton"><h3>Phillipi Branch</h3></div>
-                    <button  style=" width: 100px; height: 40px; background-color: #0B1C2C; color: #D4A81E; border-radius: 20px">Location</button>
+                    <button  style=" width: 100px; height: 40px; background-color: #0B1C2C; color: #D4A81E; border-radius: 20px">Pending</button>
                 </div>
               </div>
               
@@ -103,8 +298,8 @@
                   <img src="./img/Branches/branch1.png" style="height: 250px;" class="card-img-top" alt="...">
                   <div class="card-body ">
                       <div id="h7" class="branchnameAndButton"><h3>Cape Town Branch</h3></div>
-                      <button  style=" width: 100px; height: 40px; background-color: #0B1C2C; color: #D4A81E; border-radius: 20px">Location</button>
-                    </div>
+                      <a href="https://www.google.com/maps/place/8+Wale+St,+Cape+Town+City+Centre,+Cape+Town,+8000/@-33.9244385,18.41719,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcc6764f1905f4f:0x8c04c5bb71e35b2d!8m2!3d-33.9244385!4d18.4197649">
+                        <button  style=" width: 100px; height: 40px; background-color: #0B1C2C; color: #D4A81E; border-radius: 20px">Location</button></a>                    </div>
                   </div>
             </div>
     
@@ -113,7 +308,7 @@
                   <img src="./img/Branches/branch1.png" style="height: 250px;" class="card-img-top" alt="...">
                   <div class="card-body ">
                         <div id="h7" class="branchnameAndButton"><h3>Matthew Goniwe Sitellite</h3></div>
-                        <button style=" width: 100px; height: 40px; background-color: #0B1C2C; color: #D4A81E; border-radius: 20px">Location</button>
+                        <button style=" width: 100px; height: 40px; background-color: #0B1C2C; color: #D4A81E; border-radius: 20px">Pending</button>
                     </div>
                   </div>
             </div>

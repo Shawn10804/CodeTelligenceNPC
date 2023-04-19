@@ -2,6 +2,7 @@ nav{
     height: 100px;
     
 }
+
 /* body{
     background-image: url('img6\ 1\ \(1\).png');
     background-size: 100%;
@@ -10,7 +11,8 @@ nav{
 } */
 /* This width is the one that makes the content not responsive */
 .container{
-    position: relative; left: 80px;
+    position: relative; 
+    /* left: 80px; */
     /* width: 1000px;  */
 }
 section{
@@ -26,11 +28,11 @@ section{
     width: 115px;
     height: 39px;
     border-radius: 5px;
-    position: relative;left: -250px; top: -1.4px;
+    position: relative;
+    /* left: -250px; */
+    top: -1.4px;
 }
-/* a{
-    position: relative; left: 200px;
-}  */
+
 #line{
     background-color: #D4A81E;
     width: 50px;
@@ -40,21 +42,24 @@ section{
 #h7{
 position: relative;left: -30px;
 }
-#imggg{
-    width: 100px;
-}
+
 .branchnameAndButton{
 padding-left: 15px;
 }
 
-/* @media screen and(max-width:600px) {
-    body{
-        width: 100%;
-    }
-} */
 .nav{
     text-align: center;
 }
 
 
+@media only screen and (max-width:600px) {
+    div.ourMission{
+        padding-top: 220%;
+    }
+}
+
+.containerPadding{
+    padding-bottom:-20% ;
+    /* background-color: red; */
+}
 
