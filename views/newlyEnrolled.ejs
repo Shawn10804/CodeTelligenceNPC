@@ -1,0 +1,63 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Table</title>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+  rel="stylesheet"
+/>
+
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>Enrolled Students</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Gender</th>
+          <th>Date of Birth</th>
+          <th>Course</th>
+          <th>Email</th>
+          <th>address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < data.length; i++) { %>
+          <tr>
+            <td ><%= data[i].name %></td>
+            <td><%= data[i].surname%></td>
+            <td><%= data[i].gender %></td>
+            <td><%= data[i].dateofbirth%></td>
+            <td><%= data[i].course %></td>
+            <td><%= data[i].email %></td>
+            <td><%= data[i].address %></td>
+
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+></script>
+
+  </div>
+</body>
+</html>

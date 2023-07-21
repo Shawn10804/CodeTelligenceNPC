@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="img/favicon.ico" rel="icon">
+
+
+</head>
+
+<body style="background-color: #D4A81E;">
+  <%- include('navbar') %>
+
+
+  <div class="container">
+
+    <div style="background-color: white; width: 800px; height: 650px; position: relative; left: -330px; top: -48px;" class="container">
+      <h1>Making a Difference: Join Us<br> in Changing lives through Coding</h1>
+      <img width="500px" height="300px" style="position: relative; left: 600px; border: solid 3px white;" src="/img/WhatsApp Image 2023-04-13 at 14.12.40.jpg" class="img-fluid" alt="...">
+      <p style="position: relative; top: -200px; left: 50px;">Aimed at equipping youth from disadvantaged communities with<br> digital skills, and brigding the technolohy gap for improvished<br> communities as they are most impacted by lack of resources</p>
+  
+      <form name="PayFastPayNowForm" action="https://www.payfast.co.za/eng/process" method="post">
+        <input required type="hidden" name="cmd" value="_paynow">
+        <input required type="hidden" name="receiver" pattern="[0-9]" value="22878167">
+        <table>
+          <tr>
+            <td><label id="PayFastAmountLabel" for="PayFastAmount">Amount: </label></td>
+            <td><input required id="PayFastAmount" type="number" step=".01" name="amount" min="5.00" placeholder="5.00" value="200"></td>
+          </tr>
+        </table>
+  
+        <input required type="hidden" name="item_name" maxlength="255" value="Donate">
+        <table>
+          <tr>
+            <td colspan=2 align=center>
+              <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Dark-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
+            </td>
+          </tr>
+        </table>
+      </form>
+  
+      <!-- <a href="sk_test_3f13827bGVVlA0kd1a94da7822cd">
+        <button style=" position: relative; top: -150px; left: 50px;  width: 150px; height: 45px; border-radius: 5px; background-color: #0B1C2C; color: #D4A81E;">Donate Now</button>
+      </a> -->
+  
+  
+  
+      <a href="https://www.youtube.com/@codetelligencenpc">
+        <i class='fas fa-play-circle fa-5x' style='color:#D4A81E; position: relative; top: -123px;left: 157px;'></i></a>
+  
+      <svg style="width:120px; position:relative; top:-150px; left: 52px; " viewBox="0 0 100 100">
+        <defs>
+          <path id="circle" d="
+            M 50, 50
+            m -37, 0
+            a 37,37 0 1,1 74,0
+            a 37,37 0 1,1 -74,0" />
+        </defs>
+        <text font-size="17">
+          <textPath xlink:href="#circle">
+            See For yourself what we do
+          </textPath>
+        </text>
+      </svg>
+  
+    </div>
+  
+
+  </div>
+
+  
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+
+
+
+</head>
+<body>
+    
+
+
+    <button id="donateButton">Donate</button>
+
+
+
+
+  <script>
+    Yoco.onLoad(function () {
+      var donateButton = document.getElementById("donateButton");
+      donateButton.addEventListener("click", function () {
+        Yoco.showPopup({
+          amountInCents: 1000, // Replace '1000' with the desired donation amount in cents
+          currency: "ZAR", // Replace 'ZAR' with the desired currency code
+          name: "Your Organization",
+          description: "Donation",
+          callback: function (result) {
+            if (result.error) {
+              console.error("Payment failed:", result.error);
+            } else {
+              console.log("Payment successful:", result);
+              // Perform any necessary actions after a successful donation
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
